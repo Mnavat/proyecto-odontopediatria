@@ -1,10 +1,21 @@
-<h1>Proyecto odontopediatria veracruz</h1>
+<header>
+  <div id="logos">
+      <li> <img src="../assets/img/logo-raton1.svg" height="85px"> </li>
+      <li> <img src="../assets/img/logo-letras1.svg" height="80px"> </li>
+  </div>
 
-<ul>
-  <li><a [routerLink]="['/']">¿Quienes somos?</a></li>
-  <li><a [routerLink]="['/servicios']">Servicios</a></li>
-  <li><a [routerLink]="['/agenda-tu-cita']">Agendar una cita</a></li>
-  <li><a [routerLink]="['/contacto']">Contacto</a></li>
+    <ul>
+    <li><a [routerLink]="['/home']" [routerLinkActive]="['actived']">¿Quienes somos?</a></li>
+    <li><a [routerLink]="['/servicios']" [routerLinkActive]="['actived']">Servicios</a></li>
+    <li><a [routerLink]="['/agenda-tu-cita']" [routerLinkActive]="['actived']">Agendar una cita</a></li>
+    <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
+  </ul>
+</header>
 
-</ul>
-<router-outlet></router-outlet>
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Odontopediatria Veracruz &copy;
+</footer>

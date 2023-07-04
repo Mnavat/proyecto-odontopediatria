@@ -18,7 +18,7 @@ import { ServicesofferComponent } from './components/servicesoffer/servicesoffer
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
   ],
   providers: [
     appRoutingProviders

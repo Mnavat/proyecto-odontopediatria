@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+declare var $:any; 
 
 @Component({
   selector: 'app-about',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
-
+  ngOnInit(){
+    $('.bxslider').bxSlider({
+      mode: 'fade',
+      adaptiveHeight: true,
+      slideWidth: 400
+    });
+  }
+  
 }

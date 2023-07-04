@@ -1,0 +1,46 @@
+
+/*Pagina sobre mi*/
+
+#title{
+    width: 50%;
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+#title h1{
+    font-family: "Century gothic";
+    font-size: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.contenido{
+    float:left;
+    font-family: "Century gothic";
+    width: 47%;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    align-self: flex-start;
+}
+.contenido h2{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.contenido p{
+    font-size: 15px;
+    padding-bottom: 10px;
+    text-align: justify;
+}
+
+#containslider{
+    width: 45%;    
+    float: right;
+    padding-top: 30px;
+}
+
+.bx-wrapper, .bx-viewport{
+    height: 300px !important;
+    position: static;
+    z-index: index 0;
+}

@@ -7,7 +7,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ServicesofferComponent } from './components/servicesoffer/servicesoffer.component';
 
 const appRoutes: Routes= [
-    {path:'', component: AboutComponent},
+    {path:'home', component: AboutComponent},
     {path:'servicios', component: ServicesofferComponent},
     {path:'agenda-tu-cita', component: ScheduleComponent},
     {path:'contacto', component: ContactComponent},
