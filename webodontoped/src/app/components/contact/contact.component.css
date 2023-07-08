@@ -1,0 +1,29 @@
+#contenedorcontacto{
+    padding-top: 30px;
+    font-family: Century gothic;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#imagen{
+    padding-top: 45px;
+    padding-left: 180px;
+    border-right: 1px solid #ccc;
+}
+
+#enlaces{
+    padding-top: 70px;
+    padding-left: 40px;
+}
+
+#enlaces ul{
+    list-style: none;
+    font-size: 16px;
+    margin: 0;
+    padding-top: 20px;
+    width: 100%;
+}
+
+#enlaces ul li a{
+    text-decoration: none;
+}

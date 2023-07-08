@@ -38,7 +38,7 @@ header div{
     display: block;
     width: 100%;
     height: 60%;
-    background: linear-gradient(to right, #EB3587 50%, #e072a4) /*rgb(220, 228, 65)*/;
+    background: linear-gradient(to right, #EB3587 40%, #e072a4) /*rgb(220, 228, 65)*/;
 }
 header div li{
     display: inline-block;
@@ -50,7 +50,7 @@ header ul{
     display:block;
     width: 100%;
     margin: 0px auto;
-    background-color: #EB3587 /* rgb(220, 228, 65)*/;
+    background: linear-gradient(to right, #e2629c , #EB3587 ) /* rgb(220, 228, 65)*/;
 }
 header ul li{
     display: inline-block;
