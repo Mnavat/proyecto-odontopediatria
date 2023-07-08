@@ -1,44 +1,48 @@
 <div class="container">
     <h2>{{title}}</h2>
-
+    <div id="formulario">
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
-        <div class="wrapper">
-            <label for="paciente" class="grid-item-label">Nombre del paciente: </label>
-            <input type="text" name="patient" #patient="ngModel" [(ngModel)]="cita.paciente"  class="grid-item">
-            
-            <label for="edad"  class="grid-item-label">Edad del paciente: </label>
-            <input type="text" name="age" #age="ngModel" [(ngModel)]="cita.edad"  class="grid-item">
+            <div class="wrapper">
+                <label for="paciente" class="grid-item-label">Nombre del paciente: </label>
+                <input type="text" name="patient" #patient="ngModel" [(ngModel)]="cita.paciente"  class="grid-item">
+                
+                <label for="edad"  class="grid-item-label">Edad del paciente: </label>
+                <input type="text" name="age" #age="ngModel" [(ngModel)]="cita.edad"  class="grid-item">
 
-            <label for="tutor"  class="grid-item-label">Nombre del padre/madre: </label>
-            <input type="text" name="tutor" #tutor="ngModel" [(ngModel)]="cita.nombretutor"  class="grid-item">
+                <label for="tutor"  class="grid-item-label">Nombre del padre/madre: </label>
+                <input type="text" name="tutor" #tutor="ngModel" [(ngModel)]="cita.nombretutor"  class="grid-item">
 
-            <label for="telefono"  class="grid-item-label">Telefono del padre/madre: </label>
-            <input type="text" name="telephone" #telephone="ngModel" [(ngModel)]="cita.telefono"  class="grid-item">
+                <label for="telefono"  class="grid-item-label">Telefono del padre/madre: </label>
+                <input type="text" name="telephone" #telephone="ngModel" [(ngModel)]="cita.telefono"  class="grid-item">
 
-            <label for="cita"  class="grid-item-label">Cita: </label>
-            <select form="projectForm" name="visit" #visit="ngModel" [(ngModel)]="cita.visita"  class="grid-item">
-                <option value="Primera vez">Primera vez</option>
-                <option value="Seguimiento">Seguimiento</option>
-            </select>
+                <label for="cita"  class="grid-item-label">Cita: </label>
+                <select form="projectForm" name="visit" #visit="ngModel" [(ngModel)]="cita.visita"  class="grid-item">
+                    <option value="Primera vez">Primera vez</option>
+                    <option value="Seguimiento">Seguimiento</option>
+                </select>
 
-            <label for="Fecha"  class="grid-item-label">Fecha: </label>
-            <input type="text" name="date" #date="ngModel" [(ngModel)]="cita.fecha"  class="grid-item" id="calendario">
+                <label for="Fecha"  class="grid-item-label">Fecha: </label>
+                <input type="text" name="date" #date="ngModel" [(ngModel)]="cita.fecha"  class="grid-item" id="calendario">
 
-            <label for="hora"  class="grid-item-label">Hora: </label>
-            <select form="projectForm" name="hour" #hour="ngModel" [(ngModel)]="cita.hora"  class="grid-item">
-                <option value="1">2:00 pm a 2:45 pm</option>
-                <option value="2">2:45 pm a 3:30 pm</option>
-                <option value="3">3:30 pm a 4:15 pm</option>
-                <option value="4">4:15 pm a 5:00 pm</option>
-                <option value="5">5:45 pm a 6:30 pm</option>
-                <option value="6">6:30 pm a 7:15 pm</option>
-                <option value="7">7:15 pm a 8:00 pm</option>
-            </select>
-        </div>
+                <label for="hora"  class="grid-item-label">Hora: </label>
+                <select form="projectForm" name="hour" #hour="ngModel" [(ngModel)]="cita.hora"  class="grid-item">
+                    <option value="1">2:00 pm a 2:45 pm</option>
+                    <option value="2">2:45 pm a 3:30 pm</option>
+                    <option value="3">3:30 pm a 4:15 pm</option>
+                    <option value="4">4:15 pm a 5:00 pm</option>
+                    <option value="5">5:45 pm a 6:30 pm</option>
+                    <option value="6">6:30 pm a 7:15 pm</option>
+                    <option value="7">7:15 pm a 8:00 pm</option>
+                </select>
+            </div>
 
-        <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar">
 
-    </form>
+        </form>
+    </div>
+    <div id="logo-contact">
+        <img src="../../../assets/img/logo_1.svg">
+    </div>
 
 </div>
 
