@@ -1,0 +1,84 @@
+
+/*Pagina sobre serviceoffer*/
+
+#title{
+    width: 90%;
+    margin-left: 60px;
+    padding-top: 45px;
+    margin-bottom: 15px;
+} 
+
+#title h1{
+    font-family: "Century gothic";
+    font-size: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#descripcion{
+    width: 95%;
+    font-family: "Century gothic";
+    font-size: 17px;
+}
+
+#descripcion h2{
+    margin-bottom: 0px;
+    margin-left: 60px;
+    font-size: 18px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+#descripcion p{
+    padding-bottom: 5px;
+    margin-left: 60px;
+    text-align: left;
+}
+
+#descripcion ul{
+    padding-left: 6rem;
+    list-style-type: none;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    padding-top: 5px;
+}
+
+#contenedor > div{
+    width: 50;
+}
+
+.preventivo{
+    width: 48%;    
+    float: right;
+    padding-top: 0px;
+    border: 5px solid #EB3587;
+    margin-left: 25px;
+    padding-bottom: 20px;
+}
+
+.correctivo {
+    width: 48%;    
+    float: left;
+    padding-top: 0px;
+    border: 5px solid #D6DF24;
+    margin-right: 0px;
+    padding-bottom: 20px;
+}
+
+ul {
+    padding-left: 0.5rem;
+    list-style-type: none;
+  }
+  
+ul li {
+    padding-left: 2rem;
+    background-image: url(../../../assets/img/logo-raton1.svg);
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+  }
