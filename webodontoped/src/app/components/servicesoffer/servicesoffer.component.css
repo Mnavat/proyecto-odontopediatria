@@ -82,3 +82,22 @@ ul li {
     background-size: 1.6rem 1.6rem;
     background-repeat: no-repeat;
   }
+
+#containslider{
+    width: 100%;    
+    float: right;
+    padding-top: 0px; 
+      
+}
+
+#cslid {
+    width: 400px;
+    border: 5px solid #EB3587;
+}
+
+.bx-wrapper, .bx-viewport{
+    height: 300px !important;
+    position: static;
+    z-index: index 0;
+    
+}
