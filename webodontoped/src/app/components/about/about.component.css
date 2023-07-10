@@ -36,7 +36,7 @@
 #containslider{
     width: 45%;    
     float: right;
-    padding-top: 20px; 
+    padding-top: 0px; 
       
 }
 
@@ -52,4 +52,17 @@
     
 }
 
+/* Pruebas */
 
+ul {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+ul li {
+  padding-left: 2rem;
+  background-image: url(../../../assets/img/logo-raton1.svg);
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
