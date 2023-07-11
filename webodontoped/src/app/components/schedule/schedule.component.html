@@ -22,7 +22,14 @@
                 </select>
 
                 <label for="Fecha"  class="grid-item-label">Fecha: </label>
-                <input type="text" name="date" #date="ngModel" [(ngModel)]="cita.fecha"  class="grid-item" id="calendario">
+                <!--<input type="text" name="date" #date="ngModel" [(ngModel)]="cita.fecha"  class="grid-item" id="calendario">-->
+                <div>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </div>
+                
 
                 <label for="hora"  class="grid-item-label">Hora: </label>
                 <select form="projectForm" name="hour" #hour="ngModel" [(ngModel)]="cita.hora"  class="grid-item">
