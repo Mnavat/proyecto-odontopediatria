@@ -5,14 +5,20 @@
     grid-template-columns: 50% 50%;
 }
 
+#contenedorcontacto h2{
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+}
+
 #imagen{
-    padding-top: 45px;
+    padding-top: 75px;
     padding-left: 180px;
     border-right: 1px solid #ccc;
 }
 
 #enlaces{
-    padding-top: 70px;
+    padding-top: 0px;
     padding-left: 40px;
 }
 
@@ -26,4 +32,9 @@
 
 #enlaces ul li a{
     text-decoration: none;
+}
+
+#enlaces iframe{
+    margin-left: 50px;
+    padding-bottom: 20px;
 }
