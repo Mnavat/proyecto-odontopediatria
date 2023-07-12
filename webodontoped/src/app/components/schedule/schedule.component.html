@@ -23,12 +23,17 @@
 
                 <label for="Fecha"  class="grid-item-label">Fecha: </label>
                 <!--<input type="text" name="date" #date="ngModel" [(ngModel)]="cita.fecha"  class="grid-item" id="calendario">-->
-                <div>
-                    <input matInput [matDatepicker]="picker">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
-                </div>
+                <mat-form-field> 
+                    <input matInput [matDatepicker]="picker" 
+                            [min]="minDate"
+                            [max]="maxDate"
+                            [matDatepickerFilter]="weekDayFilter"
+                            style="background-color: white; height: 20px;"
+                            placeholder="MM/DD/YYYY">
+                    <!--<mat-hint>MM/DD/YYYY</mat-hint>-->
+                    <mat-datepicker-toggle matIconSuffix [for]="picker" style="background-color: white; "></mat-datepicker-toggle>
+                    <mat-datepicker #picker ></mat-datepicker>
+                </mat-form-field>
                 
 
                 <label for="hora"  class="grid-item-label">Hora: </label>

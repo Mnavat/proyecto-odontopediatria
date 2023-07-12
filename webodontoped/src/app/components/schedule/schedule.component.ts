@@ -27,6 +27,14 @@ export class ScheduleComponent implements OnInit{
   ngOnInit(){
 
   }
+  
+  minDate= new Date();
+  maxDate= new Date(new Date().setMonth(new Date().getMonth()+6));
+
+  weekDayFilter(date:any){
+    const dia = date.getDay();
+    return dia !=0 
+  }
 
   onSubmit(form: any){
     console.log(this.cita);

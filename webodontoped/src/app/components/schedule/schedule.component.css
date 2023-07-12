@@ -71,3 +71,10 @@ form input[type="submit"]:hover{
     top: 250px;
     left: 60%;;
 }
+
+.mat-datepicker-input mat-mdc-input-element ng-tns-c1205077789-0 mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored{
+    font-family: Century gothic;
+    font-size: 18px;
+    background: white;
+    height: 20px;
+}
