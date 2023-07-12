@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatInputModule } from "@angular/material/input";
 import { MatNativeDateModule } from "@angular/material/core";
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MatNativeDateModule } from "@angular/material/core";
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatFormFieldModule
   ],
   providers: [
     appRoutingProviders

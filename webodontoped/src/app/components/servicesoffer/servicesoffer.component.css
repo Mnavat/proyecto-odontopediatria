@@ -53,23 +53,30 @@
 }
 
 .preventivo{
-    width: 45%;    
+    width: 40%;    
     float: right;
-    padding-top: 0px;
-    border: 5px solid #EB3587;
-    margin-left: 25px;
+    padding-top: 10px;
+    border: none;
+    background-color: #eb3587d5;
+    margin-left: 55px;
     padding-bottom: 10px;
     padding-right: 30px;
+    margin-bottom: 25px;
+    border-radius: 5%;
 }
 
 .correctivo {
-    width: 45%;    
+    width: 40%;    
     float: left;
-    padding-top: 0px;
-    border: 5px solid #D6DF24;
+    padding-top: 10px;
+    border: none;
+    background-color: #d6df24e8;
     margin-right: 0px;
+    margin-left: 45px;
     padding-bottom: 10px;
     padding-right: 30px;
+    margin-bottom: 25px;
+    border-radius: 5%;
 }
 
 ul {
@@ -87,16 +94,16 @@ ul li {
 
 #containslider{
     width: 88%; 
-    float: right;  
     padding-top: 0px; 
 }
 
 #cslid {
-    width: 400px;
+    width: 300px;
+    margin-left: 17%;
 }
 
 .bx-wrapper, .bx-viewport{
-    height: 300px !important;
+    height: 200px !important;
     position: static;
     z-index: index 0;
     

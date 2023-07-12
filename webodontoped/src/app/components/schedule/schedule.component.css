@@ -55,6 +55,7 @@ form input[type="submit"]:hover{
     padding-left: 5px;
     height: 25px;
     font-size: 18px;
+    text-align: center;
 }
 
 .grid-item-label{
@@ -64,6 +65,7 @@ form input[type="submit"]:hover{
     font-size: 18px;
 }
 
+
 #logo-contact{
     float:right;
     width: 28%;
@@ -72,9 +74,21 @@ form input[type="submit"]:hover{
     left: 60%;;
 }
 
-.mat-datepicker-input mat-mdc-input-element ng-tns-c1205077789-0 mat-mdc-form-field-input-control mdc-text-field__input cdk-text-field-autofill-monitored{
+#inputdatepicker:focus{
+    background-color: white ;
+    width: 200px;
+    height: 25px;
     font-family: Century gothic;
     font-size: 18px;
-    background: white;
-    height: 20px;
+    margin-top: 0px;
+    border: none !important;
+    text-align: center;
+}
+
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+    background-color: white;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background-color: white !important;
 }

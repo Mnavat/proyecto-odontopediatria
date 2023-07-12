@@ -21,19 +21,19 @@
                     <option value="Seguimiento">Seguimiento</option>
                 </select>
 
-                <label for="Fecha"  class="grid-item-label">Fecha: </label>
+                <label for="Fecha"  class="grid-item-label" style="padding-top: 15px;">Fecha: </label>
                 <!--<input type="text" name="date" #date="ngModel" [(ngModel)]="cita.fecha"  class="grid-item" id="calendario">-->
-                <mat-form-field> 
-                    <input matInput [matDatepicker]="picker" 
+                <div class="fecha-input" style="border: 1px solid rgba(79,79,79); border-radius: 3%; align-items: baseline;">
+                    <input matInput [matDatepicker]="picker" id="inputdatepicker"
                             [min]="minDate"
                             [max]="maxDate"
                             [matDatepickerFilter]="weekDayFilter"
-                            style="background-color: white; height: 20px;"
+                            style="background-color: white ;width: 200px; height: 25px; font-family: Century gothic; font-size: 18px; margin-top: 0px; border: none; text-align: center;"
                             placeholder="MM/DD/YYYY">
                     <!--<mat-hint>MM/DD/YYYY</mat-hint>-->
                     <mat-datepicker-toggle matIconSuffix [for]="picker" style="background-color: white; "></mat-datepicker-toggle>
-                    <mat-datepicker #picker ></mat-datepicker>
-                </mat-form-field>
+                    <mat-datepicker #picker style="background-color: white;"></mat-datepicker>
+                </div>
                 
 
                 <label for="hora"  class="grid-item-label">Hora: </label>
@@ -57,4 +57,5 @@
     </div>
 
 </div>
+
 
