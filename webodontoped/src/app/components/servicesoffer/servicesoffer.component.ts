@@ -11,7 +11,8 @@ export class ServicesofferComponent {
     $('.bxslider').bxSlider({
       mode: 'fade',
       adaptiveHeight: false,
-      slideWidth: 400
+      slideWidth: 400,
+      pager: false
     });
   }
 }
