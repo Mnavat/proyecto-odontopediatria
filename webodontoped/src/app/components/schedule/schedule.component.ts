@@ -13,7 +13,6 @@ import { yearsPerPage } from '@angular/material/datepicker';
 export class ScheduleComponent implements OnInit{
   public title: string;
   public cita: Cita;
-  yearsPerPage = 4;
 
   constructor(
     private _citaService: CitasService
@@ -29,10 +28,16 @@ export class ScheduleComponent implements OnInit{
   minDate= new Date();
   maxDate= new Date(new Date().setMonth(new Date().getMonth()+6));
 
-  weekDayFilter(date:any){
-    const dia = date.getDay();
-    return dia !=0 
-  }
+  //weekDayFilter(date:any){
+    //const dia = date.getDay();
+    //return dia !=0 
+  //}
+
+  myFilter = (d: Date | null): boolean => {
+    const day = (d || new Date()).getDay();
+    // Prevent Sunday from being selected.
+    return day !== 0;
+  };
 
   onSubmit(form: any){
     console.log(this.cita);
