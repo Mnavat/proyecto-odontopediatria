@@ -7,6 +7,6 @@ export class Cita{
         public telefono: string,
         public visita: string,
         public fecha: string,
-        public hora: String
+        public hora: string
     ){}
 }

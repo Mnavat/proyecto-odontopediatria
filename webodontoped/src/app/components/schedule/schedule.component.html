@@ -4,7 +4,7 @@
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
             <div class="wrapper">
                 <label for="paciente" class="grid-item-label">Nombre del paciente: </label>
-                <input type="text" name="patient" #patient="ngModel" [(ngModel)]="cita.paciente"  class="grid-item">
+                <input type="text" id= "patient" name="patient" #patient="ngModel" [(ngModel)]="cita.paciente"  class="grid-item">
                 
                 <label for="edad"  class="grid-item-label">Edad del paciente: </label>
                 <input type="text" name="age" #age="ngModel" [(ngModel)]="cita.edad"  class="grid-item">
@@ -30,7 +30,6 @@
                             [matDatepickerFilter]= "myFilter"
                             style="background-color: white ;width: 200px; height: 25px; font-family: Century gothic; font-size: 18px; margin-top: 0px; border: none; text-align: center;"
                             placeholder="MM/DD/YYYY">
-                    <!--<mat-hint>MM/DD/YYYY</mat-hint>-->
                     <mat-datepicker-toggle matIconSuffix [for]="picker" style="background-color: white; "></mat-datepicker-toggle>
                     <mat-datepicker #picker style="background-color: white;"></mat-datepicker>
                 </div>

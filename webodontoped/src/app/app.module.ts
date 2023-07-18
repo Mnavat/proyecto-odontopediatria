@@ -25,9 +25,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ServicesofferComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     routing,
-    HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
     MatDatepickerModule,

@@ -15,7 +15,7 @@ exports.crearCita = async (req,res) =>{
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerCita = async (req,res) =>{
+exports.obtenerCita1 = async (req,res) =>{
     try {
 
         const citas = await Cita.find();
@@ -50,7 +50,7 @@ exports.actualizarCita = async (req,res) =>{
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerCita = async (req,res) =>{
+exports.obtenerCita2 = async (req,res) =>{
     try {
         let cita = await Cita.findById(req.params.id);
 

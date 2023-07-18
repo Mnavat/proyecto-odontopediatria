@@ -4,18 +4,26 @@ import { Observable } from "rxjs";
 import { Cita } from "../models/cita";
 import { Global } from "./global";
 
-@Injectable()
-export class CitasService{
-    public url: string;
+@Injectable({
+    providedIn: 'root'
+})
+export class CitaService{
+    url= 'http://localhost:4000/api/citas' ;
 
-    constructor(
-        private _http: HttpClient
-    ){
-        this.url = Global.url;
+    constructor(private http: HttpClient){
+        //this.url = Global.url;
+    }
+
+    getCitas(): Observable<any>{ //ruta para get
+        return this.http.get(this.url);
+    }
+
+    guardarCitas(cita: Cita): Observable<any> { ///ruta parapost
+        return this.http.post(this.url, cita);
     }
 
     testService(){
-        return "Probando el servicio de Angular";
+    return "Probando el servicio de Angular";
     }
 
 
