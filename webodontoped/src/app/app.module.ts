@@ -14,6 +14,7 @@ import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatInputModule } from "@angular/material/input";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { DatesComponent } from './components/dates/dates.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AboutComponent,
     ScheduleComponent,
     ContactComponent,
-    ServicesofferComponent
+    ServicesofferComponent,
+    DatesComponent
   ],
   imports: [
     HttpClientModule,
