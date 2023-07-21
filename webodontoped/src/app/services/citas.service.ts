@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpClientModule, HttpHeaders } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Cita } from "../models/cita";
-import { Global } from "./global";
 
 @Injectable({
     providedIn: 'root'
