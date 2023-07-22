@@ -1,1 +1,16 @@
-<p>dates works!</p>
+<div class="titulo">
+    <h2> {{title}} </h2>
+</div>
+
+<section>
+    <div class="contenido">
+        <h2>Citas</h2>
+        <ul class="pacientes" *ngFor="let cita of listCitas">
+            <li>{{cita.paciente}} <button class="btn"> E </button></li>
+        </ul>
+    </div>
+
+    <aside class="detalles">
+        <h3>Los detalles de la cita seleccionada</h3>
+    </aside>
+</section>
