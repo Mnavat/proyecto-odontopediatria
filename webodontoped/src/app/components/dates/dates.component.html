@@ -6,11 +6,21 @@
     <div class="contenido">
         <h2>Citas</h2>
         <ul class="pacientes" *ngFor="let cita of listCitas">
-            <li>{{cita.paciente}} <button class="btn"> E </button></li>
+            <li>{{cita.paciente}} <button (click)="onClickEditar()" [routerLink]="['/dates/',cita._id]" class="btn" > E </button></li>
         </ul>
     </div>
 
     <aside class="detalles">
         <h3>Los detalles de la cita seleccionada</h3>
+        <form [formGroup]="citaForm" >
+            <input type="text" formControlName="paciente" placeholder="paciente"><br>
+            <input type="text" formControlName="edad" placeholder="edad"><br>
+            <input type="text" formControlName="nombretutor" placeholder="nombretutor"><br>
+            <input type="text" formControlName="telefono" placeholder="telefono"><br>
+            <input type="text" formControlName="visita" placeholder="visita"><br>
+            <input type="text" formControlName="fecha" placeholder="fecha"><br>
+            <input type="text" formControlName="hora" placeholder="hora"> <br>
+            <button (click)="eliminarCita()"> Eliminar </button>
+        </form>
     </aside>
 </section>

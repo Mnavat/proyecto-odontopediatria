@@ -21,6 +21,24 @@ export class CitaService{
         return this.http.post(this.url, cita);
     }
 
+    obtenerCita(id: string): Observable<any>{//ruta para get desde el url
+        return this.http.get(this.url + '/' + id); //se tuvo que añadir la / para poder definir bien el url
+    }
+
+    obtenerCita1(): Observable<any>{//ruta para get desde el url
+        return this.http.get(this.url); //se tuvo que añadir la / para poder definir bien el url
+    }
+
+
+    eliminarCita(id: string): Observable<any>{ //ruta para delete desde el url
+        return this.http.delete(this.url + '/' + id); // se debe agregar el /
+    }
+
+    //editarCita(id: string): Observable<any>{
+    //    return this.http.get(this.url + id);
+    //}
+
+
     testService(){
     return "Probando el servicio de Angular";
     }

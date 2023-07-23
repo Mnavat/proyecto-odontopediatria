@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {routing, appRoutingProviders} from './app.routing';
 
 import { AppComponent } from './app.component';
@@ -31,6 +31,7 @@ import { DatesComponent } from './components/dates/dates.component';
     BrowserModule,
     routing,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatInputModule,
