@@ -4,6 +4,7 @@
     padding-top: 45px;
     padding-left: 60px;
     font-family: "century gothic";
+    height: fit-content;
 }
 
 .container h2{
@@ -40,6 +41,12 @@ form input[type="submit"]{
 form input[type="submit"]:hover{
     background-color: #c2075b;
     border-color: #c2075b;
+    
+}
+
+form input[disabled]{
+    opacity:0.5;
+    cursor: not-allowed;
     
 }
 
@@ -91,4 +98,14 @@ form input[type="submit"]:hover{
 
 .mdc-text-field--filled:not(.mdc-text-field--disabled){
     background-color: white !important;
+}
+
+span{
+    display:block;
+    color:#d80925;
+    font-size: medium;
+}
+
+.optionselect{
+    background-color: white;
 }

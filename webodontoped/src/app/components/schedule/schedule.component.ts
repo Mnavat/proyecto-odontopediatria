@@ -15,7 +15,7 @@ import { NgForm } from '@angular/forms';
 export class ScheduleComponent implements OnInit{
   public title: string;
   public cita: Cita;
-  
+  colorear: boolean;
 
   constructor(private _citaService: CitaService,
               private router: Router
@@ -23,6 +23,8 @@ export class ScheduleComponent implements OnInit{
 
     this.title= "Agenda tu cita";//original
     this.cita= new Cita("","","","","","","",""); //original
+    this.colorear=false;
+   
   }
   
   ngOnInit():void{
@@ -60,6 +62,10 @@ export class ScheduleComponent implements OnInit{
       next: response => console.log(response),
       error: error => console.log(error)
     });
+
+    alert("Cita creada con exito");
+    projectForm.reset()
   }
+
 
 }
