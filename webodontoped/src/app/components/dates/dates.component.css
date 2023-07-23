@@ -1,0 +1,51 @@
+/*Estilos de seccion citas agendadas*/
+
+.titulo{
+    padding-top: 30px;
+    padding-left: 60px;
+    font-family: Roboto, sans-serif;
+    font-size: 30px;
+}
+.titulo h2{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    width: 90%
+}
+.contenido{
+    float:left;
+    font-family: "Century gothic";
+    width: 65%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.detalles{
+    float:right;
+    font-family: "Century gothic";
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+.pacientes{
+    width: 100%;
+    list-style-type: none;    
+}
+.pacientes li{
+    width: 25%;
+    float: left;
+    padding-top: 10px;
+    border: none;
+    text-align: center;
+    background-color: #eb3587d5;
+    margin-left: 30px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-radius: 5%;
+}
+.btn{
+    background-color: #d6df24e8;
+}

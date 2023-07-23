@@ -13,7 +13,8 @@ const appRoutes: Routes= [
     {path:'agenda-tu-cita', component: ScheduleComponent},
     {path:'contacto', component: ContactComponent},
     {path:'dates', component: DatesComponent},
-    {path: '**', component: AboutComponent}
+    {path:'dates/:id', component: DatesComponent}, //se agrego el /:id
+    {path: '**', component: AboutComponent} // se debe checar esto
 ];
 
 export const appRoutingProviders: any[]= [];
