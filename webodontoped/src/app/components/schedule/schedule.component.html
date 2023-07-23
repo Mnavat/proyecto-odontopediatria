@@ -4,50 +4,64 @@
     <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
             <div class="wrapper">
                 <label for="paciente" class="grid-item-label">Nombre del paciente: </label>
-                <input type="text" id= "patient" name="patient" #patient="ngModel" [(ngModel)]="cita.paciente"  class="grid-item">
+                <input type="text" id= "patient" name="patient" #patient="ngModel" [(ngModel)]="cita.paciente"  class="grid-item" placeholder="Nombre Apellidos" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required/> 
                 
+
                 <label for="edad"  class="grid-item-label">Edad del paciente: </label>
-                <input type="text" name="age" #age="ngModel" [(ngModel)]="cita.edad"  class="grid-item">
+                <input type="number" name="age" #age="ngModel" [(ngModel)]="cita.edad"  class="grid-item" pattern="^[0-9]+" placeholder="Edad (años)" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required/>
 
                 <label for="tutor"  class="grid-item-label">Nombre del padre/madre: </label>
-                <input type="text" name="tutor" #tutor="ngModel" [(ngModel)]="cita.nombretutor"  class="grid-item">
+                <input type="text" name="tutor" #tutor="ngModel" [(ngModel)]="cita.nombretutor"  class="grid-item" placeholder="Nombre Apellidos" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required/>
 
                 <label for="telefono"  class="grid-item-label">Telefono del padre/madre: </label>
-                <input type="text" name="telephone" #telephone="ngModel" [(ngModel)]="cita.telefono"  class="grid-item">
+                <input type="number" pattern="[0-9]{10}" name="telephone" #telephone="ngModel" [(ngModel)]="cita.telefono"  class="grid-item" placeholder="Telefono a 10 digitos" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required/>
 
                 <label for="cita"  class="grid-item-label">Cita: </label>
-                <select form="projectForm" name="visit" #visit="ngModel" [(ngModel)]="cita.visita"  class="grid-item">
-                    <option value="Primera vez">Primera vez</option>
-                    <option value="Seguimiento">Seguimiento</option>
+                <select form="projectForm" name="visit" #visit="ngModel" [(ngModel)]="cita.visita"  class="grid-item" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required>
+                    <option disabled selected class="optionselect">Selecciona una opción</option>
+                    <option value="Primera vez" class="optionselect">Primera vez</option>
+                    <option value="Seguimiento" class="optionselect">Seguimiento</option>
                 </select>
 
                 <label for="Fecha"  class="grid-item-label" style="padding-top: 15px;">Fecha: </label>
                 <!--<input type="text" name="date" #date="ngModel" [(ngModel)]="cita.fecha"  class="grid-item" id="calendario">-->
                 <div class="fecha-input" style="border: 1px solid rgba(79,79,79); border-radius: 3%; align-items: baseline;">
-                    <input matInput #date="ngModel" [ngModelOptions]="{standalone: true}" [(ngModel)]="cita.fecha" [matDatepicker]="picker" id="inputdatepicker"
+                    <input matInput name="sdate" #sdate="ngModel" [ngModelOptions]="{standalone: true}" [(ngModel)]="cita.fecha" [matDatepicker]="picker" id="inputdatepicker"
                             [min]="minDate"
                             [max]="maxDate"
                             [matDatepickerFilter]= "myFilter"
                             style="background-color: white ;width: 200px; height: 25px; font-family: Century gothic; font-size: 18px; margin-top: 0px; border: none; text-align: center;"
-                            placeholder="MM/DD/YYYY">
+                            (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}"
+                            placeholder="mes/día/año">
                     <mat-datepicker-toggle matIconSuffix [for]="picker" style="background-color: white; "></mat-datepicker-toggle>
                     <mat-datepicker #picker style="background-color: white;"></mat-datepicker>
                 </div>
                 
 
                 <label for="hora"  class="grid-item-label">Hora: </label>
-                <select form="projectForm" name="hour" #hour="ngModel" [(ngModel)]="cita.hora"  class="grid-item">
-                    <option value="1">2:00 pm a 2:45 pm</option>
-                    <option value="2">2:45 pm a 3:30 pm</option>
-                    <option value="3">3:30 pm a 4:15 pm</option>
-                    <option value="4">4:15 pm a 5:00 pm</option>
-                    <option value="5">5:45 pm a 6:30 pm</option>
-                    <option value="6">6:30 pm a 7:15 pm</option>
-                    <option value="7">7:15 pm a 8:00 pm</option>
+                <select form="projectForm" name="hour" #hour="ngModel" [(ngModel)]="cita.hora"  class="grid-item" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required>
+                    <option disabled selected class="optionselect">Selecciona un horario</option>
+                    <option value="1" class="optionselect">2:00 pm a 2:45 pm</option>
+                    <option value="2" class="optionselect">2:45 pm a 3:30 pm</option>
+                    <option value="3" class="optionselect">3:30 pm a 4:15 pm</option>
+                    <option value="4" class="optionselect">4:15 pm a 5:00 pm</option>
+                    <option value="5" class="optionselect">5:45 pm a 6:30 pm</option>
+                    <option value="6" class="optionselect">6:30 pm a 7:15 pm</option>
+                    <option value="7" class="optionselect">7:15 pm a 8:00 pm</option>
                 </select>
             </div>
 
-            <input type="submit" value="Enviar">
+            <div id="errores">
+                <span *ngIf="patient.touched && !patient.valid"><b>Ingresa un nombre valido</b></span>
+                <span *ngIf="age.touched && !age.valid"><b>Ingresa una edad valida</b></span> 
+                <span *ngIf="tutor.touched && !tutor.valid"><b>Ingresa un nombre de tutor valido</b></span> 
+                <span *ngIf="telephone.touched && !telephone.valid"><b>Ingresa un telefono de tutor valido</b></span>
+                <span *ngIf="visit.touched && !visit.valid"><b>Selecciona un tipo de visita</b></span> 
+                <span *ngIf="sdate.touched && !sdate.valid || sdate.value === null"><b>Selecciona una fecha</b></span> 
+                <span *ngIf="hour.touched && !hour.valid"><b>Selecciona una hora de visita</b></span> 
+            </div> 
+
+            <input type="submit" id="botonenvio" value="Enviar" [disabled]="!projectForm.form.valid">
 
         </form>
     </div>
