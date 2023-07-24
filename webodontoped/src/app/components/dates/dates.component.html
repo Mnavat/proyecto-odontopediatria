@@ -1,14 +1,14 @@
-<div class="titulo">
-    <h2> {{title}} </h2>
+<h2> {{title}} </h2>
+<div class="wrapper">
+    <section class="contenido">
+            <ul class="pacientes" *ngFor="let cita of listCitas">
+                <li> <button (click)="editarCita()" [routerLink]="['/dates/',cita._id]" class="btn" > {{cita.paciente}} </button></li>
+            </ul>
+    </section>
+
+    <section [ngClass]="{'componentedetalles': abr, 'componentedetallesdis':!abr}">
+        <app-datesdetail></app-datesdetail>
+    </section>
 </div>
 
-<section>
-    <div class="contenido">
-        <h2>Citas</h2>
-        <ul class="pacientes" *ngFor="let cita of listCitas">
-            <li> <button (click)="editarCita()" [routerLink]="['/dates/',cita._id]" class="btn" > {{cita.paciente}} </button></li>
-        </ul>
-    </div>
-</section>
 
-<app-datesdetail></app-datesdetail>

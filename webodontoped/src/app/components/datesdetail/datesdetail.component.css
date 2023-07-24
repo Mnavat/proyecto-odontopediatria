@@ -1,8 +1,66 @@
-.detalles{
-    float:right;
-    font-family: "Century gothic";
-    width: 30%;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    align-self: flex-start;
+h3{
+    font-size: 16px;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-family: century gothic;
+}
+
+form{
+    padding-left: 5px;
+    margin-top: -15px;
+    font-family: century gothic;
+}
+
+form label{
+    font-size: 12px;
+}
+
+form input{
+    width: 85%;
+    padding-left: 7%;
+    font-family: century gothic;
+    font-size: 14px
+}
+
+.buttonwrapper{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    gap:6%;
+    margin-left: 7%; 
+    margin-top: 5%;
+}
+
+#deletebutton{
+    background-color: red;
+    opacity: 70%;
+    font-family: Century gothic;
+    font-size: 15px;
+    border: none;
+    border-radius: 7%;
+    color:white;
+    height: 30px;
+}
+
+#deletebutton:hover{
+    opacity: 100%;
+    transform: scale(1.2);
+}
+
+#updatebutton{
+    background-color: green;
+    opacity: 75%;
+    font-family: Century gothic;
+    font-size: 15px;
+    border: none;
+    border-radius: 7%;
+    color:white;
+    height: 30px;
+    transition: background-color
+
+}
+
+#updatebutton:hover{
+    transform:scale(1.2);
+    opacity:100%;
+
 }

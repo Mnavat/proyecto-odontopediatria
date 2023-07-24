@@ -16,6 +16,7 @@ export class DatesComponent implements OnInit {
   listCitas: Cita[] = []; //variable para hacer el for en html
   id: string | null; // variable del id dada por el url
   public citaForm: FormGroup; //para rellenar el fomulario al momento de leer el url
+  abr: boolean;
 
   constructor(
     private fb: FormBuilder, //para usar FormGroup
@@ -36,6 +37,7 @@ export class DatesComponent implements OnInit {
     })
     this.id = this.aRouter.snapshot.paramMap.get('id')//Obtener el id del url y ponerlo en var
     console.log(this.id);
+    this.abr=false;
   }
 
   ngOnInit(): void {
@@ -51,6 +53,7 @@ export class DatesComponent implements OnInit {
   }
 
   editarCita(){
+    this.abr=true;
     this.id = this.aRouter.snapshot.paramMap.get('id')//Obtener el id del url y ponerlo en var
     if (this.id !== null && !undefined){
       console.log(this.id)

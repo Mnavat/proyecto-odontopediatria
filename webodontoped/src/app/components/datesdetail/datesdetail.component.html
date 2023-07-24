@@ -1,18 +1,30 @@
+<h3>Detalles de la cita seleccionada: </h3>
+<form [formGroup]="citaForm">
+    
+    <label>Paciente:</label><br>
+    <input type="text" formControlName="paciente" id="paciente" placeholder="paciente"><br>
 
-<aside class="detalles">
-    <h3>Los detalles de la cita seleccionada</h3>
-    <form [formGroup]="citaForm" >
-        <input type="text" formControlName="paciente" id="paciente" placeholder="paciente"><br>
-        <input type="text" formControlName="edad" id="edad" placeholder="edad"><br>
-        <input type="text" formControlName="nombretutor" id="nombretutor" placeholder="nombretutor"><br>
-        <input type="text" formControlName="telefono" id="telefono" placeholder="telefono"><br>
-        <input type="text" formControlName="visita" id="visita" placeholder="visita"><br>
-        <input type="text" formControlName="fecha" id="fecha" placeholder="fecha"><br>
-        <input type="text" formControlName="hora" id="hora" placeholder="hora"> <br>
-        
-        
-    </form>
-    <button (click)="eliminarCita()" routerLink="/dates"> Eliminar </button> <br>
-    <button (click)="actualizarCita()"> Actualizar </button> <br>
+    <label>Edad:</label><br>
+    <input type="text" formControlName="edad" id="edad" placeholder="edad"><br>
 
-</aside>
+    <label>Tutor:</label><br>
+    <input type="text" formControlName="nombretutor" id="nombretutor" placeholder="nombretutor"><br>
+
+    <label>Telefono:</label><br>
+    <input type="text" formControlName="telefono" id="telefono" placeholder="telefono"><br>
+
+    <label>Visita:</label><br>
+    <input type="text" formControlName="visita" id="visita" placeholder="visita"><br>
+
+    <label>Fecha:</label><br>
+    <input type="text" formControlName="fecha" id="fecha" placeholder="fecha"><br>
+
+    <label>Hora:</label><br>
+    <input type="text" formControlName="hora" id="hora" placeholder="hora"> <br>
+           
+</form>
+<div class="buttonwrapper">
+    <button (click)="actualizarCita()" id="updatebutton"> Actualizar </button>
+    <button (click)="eliminarCita()" routerLink="/dates" id="deletebutton"> Eliminar </button>
+
+</div>
