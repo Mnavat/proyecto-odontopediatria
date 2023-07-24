@@ -16,6 +16,7 @@ const appRoutes: Routes= [
     {path:'dates', component: DatesComponent},
     {path:'dates/:id', component: DatesComponent}, //se agrego el /:id
     {path:'datesdetail', component: DatesdetailComponent},
+    {path:'datesdetail/:id', component: DatesdetailComponent},
     {path: '**', component: AboutComponent} // se debe checar esto
 ];
 

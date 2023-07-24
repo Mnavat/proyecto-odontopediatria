@@ -41,8 +41,6 @@ export class DatesComponent implements OnInit {
   ngOnInit(): void {
     this.id = null;
     this.obtenerCitas(); //Se inicia el obtenerCitas desde que se inicia el menu
-    this.editarCita();
-    //this.eliminarCita();
   }
 
   obtenerCitas(){ 
@@ -50,10 +48,6 @@ export class DatesComponent implements OnInit {
       next: response => this.listCitas=response,
       error: error => console.log(error)
     });
-  }
-
-  onClickEditar(){
-    this.editarCita();
   }
 
   editarCita(){
@@ -75,20 +69,4 @@ export class DatesComponent implements OnInit {
       }) 
     }
   }
-
-  eliminarCita(){
-    if (this.id !== null && !undefined){
-      console.log(this.id);
-      this._citaService.eliminarCita(this.id).subscribe(data=>{
-      //this._citaService.getCitas();
-    }); //error =>{
-    //  console.log(error);
-    //} )
-    //next: response => this.obtenerCitas(this.id),
-    //error: error => console.log(error)
-  //});
-   }
- }
- 
-
 }

@@ -34,10 +34,9 @@ export class CitaService{
         return this.http.delete(this.url + '/' + id); // se debe agregar el /
     }
 
-    //editarCita(id: string): Observable<any>{
-    //    return this.http.get(this.url + id);
-    //}
-
+    editarCita(id: string, paciente:string): Observable<any>{ //para el metodo put
+        return this.http.put(this.url + '/' + id, paciente); // se debe agregar el /
+    }
 
     testService(){
     return "Probando el servicio de Angular";

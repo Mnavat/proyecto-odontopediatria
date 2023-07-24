@@ -1,1 +1,21 @@
-<p>datesdetail works!</p>
+<div class="titulo">
+    <h2> {{title}} </h2>
+</div>
+
+<aside class="detalles">
+    <h3>Los detalles de la cita seleccionada</h3>
+    <form [formGroup]="citaForm">
+        <input type="text" formControlName="paciente" id="paciente" placeholder="paciente"><br>
+        <input type="text" formControlName="edad" id="edad" placeholder="edad"><br>
+        <input type="text" formControlName="nombretutor" id="nombretutor" placeholder="nombretutor"><br>
+        <input type="text" formControlName="telefono" id="telefono" placeholder="telefono"><br>
+        <input type="text" formControlName="visita" id="visita" placeholder="visita"><br>
+        <input type="text" formControlName="fecha" id="fecha" placeholder="fecha"><br>
+        <input type="text" formControlName="hora" id="hora" placeholder="hora"> <br>
+        
+        <!--<input type="submit" id="btnactualizar" value="Actualizar"> -->
+        
+    </form>
+    <button (click)="eliminarCita()" routerLink="/dates"> Eliminar </button> <br>
+    <button routerLink="/dates"> Regresar </button>
+</aside>
