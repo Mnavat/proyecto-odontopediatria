@@ -3,7 +3,6 @@ import { Cita } from 'src/app/models/cita';
 import { CitaService } from 'src/app/services/citas.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-//import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-datesdetail',
@@ -12,8 +11,7 @@ import { FormBuilder, FormGroup, FormControl, FormsModule, ReactiveFormsModule }
   providers: [CitaService],
 })
 export class DatesdetailComponent {
-  public title: string;
-  public cita: Cita;
+  //public cita: Cita;
   listCitas: Cita[] = []; //variable para hacer el for en html
   id: string | null; // variable del id dada por el url
   public citaForm: FormGroup; //para rellenar el fomulario al momento de leer el url
@@ -24,8 +22,7 @@ export class DatesdetailComponent {
     private router: Router,
     private aRouter: ActivatedRoute //Para poder leer la ruta
   ){
-    this.title= "Editar";//original
-    this.cita= new Cita("","","","","","","",""); //original
+    //this.cita= new Cita("","","","","","","",""); //original
     this.citaForm=this.fb.group({
       paciente: [],
       edad: [],
@@ -41,7 +38,7 @@ export class DatesdetailComponent {
 
   ngOnInit(): void {
     //this.id = null;
-    //this.obtenerCitas(); //Se inicia el obtenerCitas desde que se inicia el menu
+    this.obtenerCitas(); //Se inicia el obtenerCitas desde que se inicia el menu
     this.editarCita();
     //this.eliminarCita();
   }
@@ -83,19 +80,27 @@ export class DatesdetailComponent {
     //error: error => console.log(error)
   //});
    }
+   
  }
- //onSubmit(citasForm: NgForm){
-  //const cita:any={
-    //paciente:this.cita.paciente,
-    //edad:this.cita.edad,
-    //nombretutor:this.cita.nombretutor,
-    //telefono:this.cita.telefono,
-    //visita:this.cita.visita,
-    //fecha:this.cita.fecha,
-    //hora:this.cita.hora
-    //};
-  //console.log(cita)
- }
+ actualizarCita(){
+  let CITA: any ={
+      paciente: this.citaForm.get('paciente')?.value,
+      edad: this.citaForm.get('edad')?.value, 
+      nombretutor: this.citaForm.get('nombretutor')?.value, 
+      telefono: this.citaForm.get('telefono')?.value,
+      visita: this.citaForm.get('visita')?.value,
+      fecha: this.citaForm.get('fecha')?.value,
+      hora: this.citaForm.get('hora')?.value,
+      };
+    console.log(CITA);
+  
+    if(this.id !==null){
+      this._citaService.editarCita(this.id, CITA).subscribe(data =>{
+        
+      })
+    }
 
+  }
 
+}
 

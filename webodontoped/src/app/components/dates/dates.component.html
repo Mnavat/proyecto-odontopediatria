@@ -6,7 +6,9 @@
     <div class="contenido">
         <h2>Citas</h2>
         <ul class="pacientes" *ngFor="let cita of listCitas">
-            <li> <button (click)="editarCita()" [routerLink]="['/datesdetail/',cita._id]" class="btn" > {{cita.paciente}} </button></li>
+            <li> <button (click)="editarCita()" [routerLink]="['/dates/',cita._id]" class="btn" > {{cita.paciente}} </button></li>
         </ul>
     </div>
 </section>
+
+<app-datesdetail></app-datesdetail>
