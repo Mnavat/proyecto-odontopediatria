@@ -5,7 +5,6 @@
             <div class="wrapper">
                 <label for="paciente" class="grid-item-label">Nombre del paciente: </label>
                 <input type="text" id= "patient" name="patient" #patient="ngModel" [(ngModel)]="cita.paciente"  class="grid-item" placeholder="Nombre Apellidos" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required/> 
-                
 
                 <label for="edad"  class="grid-item-label">Edad del paciente: </label>
                 <input type="number" name="age" #age="ngModel" [(ngModel)]="cita.edad"  class="grid-item" pattern="^[0-9]+" placeholder="Edad (años)" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required/>
@@ -41,13 +40,13 @@
                 <label for="hora"  class="grid-item-label">Hora: </label>
                 <select form="projectForm" name="hour" #hour="ngModel" [(ngModel)]="cita.hora"  class="grid-item" (mouseover)="colorear=true" (mouseout)="colorear=false" [ngStyle]="colorear? {'background-color':'pink'}:{'background-color':'white'}" required>
                     <option disabled selected class="optionselect">Selecciona un horario</option>
-                    <option value="1" class="optionselect">2:00 pm a 2:45 pm</option>
-                    <option value="2" class="optionselect">2:45 pm a 3:30 pm</option>
-                    <option value="3" class="optionselect">3:30 pm a 4:15 pm</option>
-                    <option value="4" class="optionselect">4:15 pm a 5:00 pm</option>
-                    <option value="5" class="optionselect">5:45 pm a 6:30 pm</option>
-                    <option value="6" class="optionselect">6:30 pm a 7:15 pm</option>
-                    <option value="7" class="optionselect">7:15 pm a 8:00 pm</option>
+                    <option value="2:00 pm a 2:45 pm" class="optionselect">2:00 pm a 2:45 pm</option>
+                    <option value="2:45 pm a 3:30 pm" class="optionselect">2:45 pm a 3:30 pm</option>
+                    <option value="3:30 pm a 4:15 pm" class="optionselect">3:30 pm a 4:15 pm</option>
+                    <option value="4:15 pm a 5:00 pm" class="optionselect">4:15 pm a 5:00 pm</option>
+                    <option value="5:45 pm a 6:30 pm" class="optionselect">5:45 pm a 6:30 pm</option>
+                    <option value="6:30 pm a 7:15 pm" class="optionselect">6:30 pm a 7:15 pm</option>
+                    <option value="7:15 pm a 8:00 pm" class="optionselect">7:15 pm a 8:00 pm</option>
                 </select>
             </div>
 

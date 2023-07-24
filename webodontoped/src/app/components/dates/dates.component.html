@@ -1,4 +1,5 @@
 <h2> {{title}} </h2>
+<h4> Da doble click para mostrar los detalles de la cita: </h4>
 <div class="wrapper">
     <section class="contenido">
             <ul class="pacientes" *ngFor="let cita of listCitas">
@@ -7,7 +8,36 @@
     </section>
 
     <section [ngClass]="{'componentedetalles': abr, 'componentedetallesdis':!abr}">
-        <app-datesdetail></app-datesdetail>
+    <h3>Detalles de la cita seleccionada: </h3>
+    <form [formGroup]="citaForm">
+        
+        <label>Paciente:</label><br>
+        <input type="text" formControlName="paciente" id="paciente" placeholder="paciente"><br>
+
+        <label>Edad:</label><br>
+        <input type="text" formControlName="edad" id="edad" placeholder="edad"><br>
+
+        <label>Tutor:</label><br>
+        <input type="text" formControlName="nombretutor" id="nombretutor" placeholder="nombretutor"><br>
+
+        <label>Telefono:</label><br>
+        <input type="text" formControlName="telefono" id="telefono" placeholder="telefono"><br>
+
+        <label>Visita:</label><br>
+        <input type="text" formControlName="visita" id="visita" placeholder="visita"><br>
+
+        <label>Fecha:</label><br>
+        <input type="text" formControlName="fecha" id="fecha" placeholder="fecha"><br>
+
+        <label>Hora:</label><br>
+        <input type="text" formControlName="hora" id="hora" placeholder="hora"> <br>
+            
+    </form>
+    <div class="buttonwrapper">
+        <button (click)="actualizarCita()" id="updatebutton"> Actualizar </button>
+        <button (click)="eliminarCita()" routerLink="/dates" id="deletebutton"> Eliminar </button>
+
+    </div>
     </section>
 </div>
 
