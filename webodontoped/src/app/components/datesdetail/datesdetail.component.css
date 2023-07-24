@@ -1,0 +1,8 @@
+.detalles{
+    float:right;
+    font-family: "Century gothic";
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}

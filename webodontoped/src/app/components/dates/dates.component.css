@@ -22,14 +22,6 @@
     align-self: flex-start;
 }
 
-.detalles{
-    float:right;
-    font-family: "Century gothic";
-    width: 30%;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    align-self: flex-start;
-}
 .pacientes{
     width: 100%;
     list-style-type: none;    
