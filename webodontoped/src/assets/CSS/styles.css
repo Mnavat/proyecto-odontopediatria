@@ -1,7 +1,7 @@
-@font-face{
+/* @font-face{
     font-family: "ubuntutitle";
     src: url("../fonts/clubbebtolife.otf");
-}
+} */
 
 /*Estilos generales*/
 *{
@@ -11,7 +11,7 @@
 }
 
 body{
-    font-family: "ubuntutitle";
+    font-family:Arial, Helvetica, sans-serif;
     font-size: 20px; 
     background: url("../img/bgop4-300.jpg");
     background-attachment: fixed;
@@ -50,6 +50,7 @@ header ul{
 }
 header ul li{
     display: inline-block;
+    font-family: "Century gothic";
     margin-top: 0px;
     text-align: center;
     line-height: 40px;
@@ -91,6 +92,6 @@ footer{
     font-size: 15px;
 }
 
-
+/* 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
